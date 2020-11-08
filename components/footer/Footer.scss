@@ -1,0 +1,26 @@
+.footer {
+  z-index: 10;
+  background-color: transparent;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  border-left: 1.5px solid rgba(0, 0, 0, 0.1);
+  padding-left: 30px;
+  ul {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5vh 0;
+    list-style: none;
+    li {
+      padding-right: 30px;
+      font-size: 1.3rem;
+      font-weight: 800;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

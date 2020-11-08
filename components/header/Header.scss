@@ -1,0 +1,54 @@
+.header {
+  position: fixed;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  padding: 5vh 30px;
+  background-color: transparent;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  a {
+    display: block;
+    font-size: 18px;
+    margin: 15px 16px;
+    font-weight: bold;
+    z-index: 12;
+    position: relative;
+  }
+  text {
+    text-anchor: middle;
+    font-size: 105px;
+    font-family: 'Courgette', cursive;
+    font-weight: 900;
+    fill: #ffffff;
+    transition: .5s;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.mail {
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  svg {
+    width: 32.5px;
+    height: 32.5px;
+    fill: white;
+    &:hover {
+      transform: rotate(20deg);
+      transition: .35s ease-in-out;
+    }
+  }
+}

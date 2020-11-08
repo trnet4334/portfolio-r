@@ -1,0 +1,26 @@
+{
+  "Logo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "LazyLogo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "Footer": {
+    "description": "Auto imported from components/footer/Footer.vue"
+  },
+  "LazyFooter": {
+    "description": "Auto imported from components/footer/Footer.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/header/Header.vue"
+  },
+  "LazyHeader": {
+    "description": "Auto imported from components/header/Header.vue"
+  },
+  "ProductCard": {
+    "description": "Auto imported from components/productCard/ProductCard.vue"
+  },
+  "LazyProductCard": {
+    "description": "Auto imported from components/productCard/ProductCard.vue"
+  }
+}
