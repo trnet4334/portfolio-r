@@ -13,7 +13,7 @@
         :lineLinked="true"
         :lineOpacity="0.3"
         :linesDistance="130"
-        :moveSpeed="2.5"
+        :moveSpeed="2.8"
         :hoverEffect="true"
         hoverMode="grab"
         :clickEffect="true"
@@ -157,7 +157,7 @@ import {
 } from '@chakra-ui/vue'
 
 export default {
-  name: 'App',
+  name: 'About',
   components: {
     Header,
     Footer,
@@ -183,8 +183,6 @@ export default {
   width: 100vw;
   height: 100vh;
   overflow: scroll;
-  //background: url("~assets/images/background-2.jpg");
-  //background-size: cover;
 }
 .icon {
   width: 30px;
