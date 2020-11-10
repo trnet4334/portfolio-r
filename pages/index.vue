@@ -2,7 +2,8 @@
   <div class="container">
     <Header/>
     <c-box class="bg-box"/>
-    <no-ssr>
+    <product-cards/>
+    <client-only>
       <vue-particles
         color="#a9a9a9"
         :particleOpacity="0.5"
@@ -21,7 +22,7 @@
         clickMode="push"
       >
       </vue-particles>
-    </no-ssr>
+    </client-only>
     <c-flex
       align="center"
       justify="flex-start"
@@ -40,7 +41,7 @@
       >
         <c-heading
           fontSize="6rem"
-          color="#ff0000"
+          color="#ef233c"
           fontWeight="900"
           fontFamily="'Grandstander', cursive"
         >
@@ -52,7 +53,7 @@
           fontWeight="900"
           fontFamily="'Grandstander', cursive"
         >
-          <span style="color: #ff0000;">I'm</span> a
+          <span style="color: #ef233c;">I'm</span> a
         </c-text>
         <c-text
           fontSize="3.4rem"
@@ -60,7 +61,7 @@
           fontWeight="900"
           fontFamily="'Grandstander', cursive"
         >
-          creative <span style="color: #ff0000;">developer</span> .
+          creative <span style="color: #ef233c;">developer</span> .
         </c-text>
       </c-box>
     </c-flex>
@@ -99,6 +100,7 @@
 <script lang="js">
 import Footer from '@/components/footer/Footer'
 import Header from '@/components/header/Header'
+import ProductCards from "@/components/ProductCards/ProductCards";
 import {
   CBox,
   CFlex,
@@ -111,6 +113,7 @@ export default {
   components: {
     Header,
     Footer,
+    ProductCards,
     CBox,
     CText,
     CFlex,
@@ -130,6 +133,7 @@ export default {
 .container {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 .slogan {
   padding-left: 40px;

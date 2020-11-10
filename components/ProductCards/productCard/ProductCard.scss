@@ -1,0 +1,30 @@
+.card {
+  margin: 0 3vw;
+  width: 50vw;
+  height: auto;
+  filter: blur(5.5);
+  &:hover {
+    filter: blur(1);
+    transform: scale(1.04);
+  }
+  &:before {
+    background-color: #262222;
+  }
+}
+.image-box {
+  width: 100%;
+  height: 25vw;
+  background-color: #14213d;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.image {
+  width: 25vw;
+  height: 25vw;
+  object-fit: cover;
+  opacity: .3;
+  &:hover {
+    opacity: 1;
+  }
+}

@@ -30,7 +30,7 @@ const proj = [
     {
         title: 'A\'s Burger Kitchen',
         id: 'burger-page',
-        url: 'Restaurant',
+        url: 'burger',
         description: [
             'This page is built with Vue 2 and Vue-Cli 3. The content include several components to introduce the restaurant. This project is as practice experience in my learning progress.'
         ],

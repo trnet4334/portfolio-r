@@ -1,7 +1,7 @@
 <template>
   <div class="about-container">
     <Header/>
-    <no-ssr>
+    <client-only>
       <vue-particles
         color="#a9a9a9"
         :particleOpacity="0.5"
@@ -20,7 +20,7 @@
         clickMode="push"
       >
       </vue-particles>
-    </no-ssr>
+    </client-only>
     <c-flex
       width="100vw"
       height="100vh"
