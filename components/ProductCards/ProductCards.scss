@@ -21,7 +21,7 @@
   align-items: center;
   overflow-x: hidden;
   overflow-y: hidden;
-  animation: carousel 15s ease-in-out infinite;
+  animation: carousel 14s ease-in-out infinite;
   &:hover {
     animation-play-state: paused;
   }
@@ -69,8 +69,11 @@
   10% {
     transform: translateX(0);
   }
-  55% {
+  50% {
     transform: translateX(-40vw);
+  }
+  90% {
+    transform: translateX(-80vw);
   }
   100% {
     transform: translateX(-80vw);

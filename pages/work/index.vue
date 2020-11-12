@@ -32,10 +32,34 @@
       top="0"
     >
       <c-box class="grid__container">
-        <c-box class="grid__item-1" @click="open('vue-hotel')"/>
+        <c-box class="grid__item-1" @click="open('vue-hotel')">
+          <span class="more-detail">
+            <c-text
+              fontSize="1.6rem"
+              fontWeight="800"
+              fontFamily="'Mulish', sans-serif"
+              color="rgba(255, 255, 255, 0.5)"
+            >
+              Click for more detail
+            </c-text>
+          </span>
+          <div class="middle"/>
+        </c-box>
         <c-box class="grid__item-2"/>
         <c-box class="grid__item-3"/>
-        <c-box class="grid__item-4" @click="open('burger-page')"/>
+        <c-box class="grid__item-4" @click="open('burger-page')">
+          <span class="more-detail">
+            <c-text
+              fontSize="1.6rem"
+              fontWeight="800"
+              fontFamily="'Mulish', sans-serif"
+              color="rgba(255, 255, 255, 0.5)"
+            >
+              Click for more detail
+            </c-text>
+          </span>
+          <div class="middle"/>
+        </c-box>
       </c-box>
     </c-flex>
     <Footer/>
@@ -187,6 +211,7 @@ export default {
   grid-area: 1 / 1 / span 1 / span 2;
   background: url("../../assets/images/hotel.png") center no-repeat;
   background-size: cover;
+  position: relative;
   &:hover {
     cursor: pointer;
   }
@@ -195,18 +220,50 @@ export default {
   grid-area: 1 / 3 / span 1 / span 1;
   background: url("../../assets/images/moon.gif") right no-repeat;
   background-size: cover;
+  position: relative;
 }
 .grid__item-3 {
   grid-area: 2 / 1 / span 1 / span 1;
   background: url("../../assets/images/man.gif") right no-repeat;
   background-size: cover;
+  position: relative;
 }
 .grid__item-4 {
   grid-area: 2 / 2 / span 1 / span 2;
   background: url("../../assets/images/Restaurant.png") center no-repeat;
   background-size: cover;
+  position: relative;
   &:hover {
     cursor: pointer;
   }
+}
+.middle {
+  width: 100%;
+  background-color: #14213d;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: opacity .4s;
+}
+.grid__item-1:hover .middle, .grid__item-4:hover .middle {
+  opacity: .9;
+}
+.more-detail {
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  visibility: hidden;
+  transition: .5s ease-out;
+}
+.grid__item-1:hover .more-detail, .grid__item-4:hover .more-detail {
+  bottom: 40%;
+  visibility: visible;
 }
 </style>

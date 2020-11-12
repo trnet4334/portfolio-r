@@ -8,23 +8,23 @@
         :proj="item"
         :key="item.id"
       ></product-card>
-      <c-box class="card-last">
-        <c-image
-          :src="require('@/assets/images/eye.gif')"
-          class="image"
-        />
-        <NuxtLink to="/work">
-          <c-text
-            fontSize="1.4rem"
-            fontWeight="700"
-            lineHeight="3rem"
-            fontFamily="'Mulish', sans-serif"
-            class="letter"
-          >
-            View more
-          </c-text>
-        </NuxtLink>
-      </c-box>
+      <NuxtLink to="/work">
+        <c-box class="card-last">
+          <c-image
+            :src="require('@/assets/images/eye.gif')"
+            class="image"
+          />
+            <c-text
+              fontSize="1.4rem"
+              fontWeight="700"
+              lineHeight="3rem"
+              fontFamily="'Mulish', sans-serif"
+              class="letter"
+            >
+              View more
+            </c-text>
+        </c-box>
+      </NuxtLink>
     </c-box>
   </c-box>
 </template>
