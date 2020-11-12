@@ -1,12 +1,13 @@
 .cards--wrap {
   position: absolute;
   opacity: 1;
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
   transition: opacity 200ms ease-in-out;
   top: 20vh;
+  right: 5vw;
   z-index: 15;
-  width: 100vw;
+  width: 40vw;
   background-color: transparent;
   &::-webkit-scrollbar {
     display: none;
@@ -15,15 +16,19 @@
   scrollbar-width: none;
 }
 .cards--container {
-  display: block;
-  width: 150vw;
-  transform: translateX(80vw);
-  vertical-align: middle;
+  width: 120vw;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  animation: carousel 15s ease-in-out infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
 }
 .card-last {
-  width: 25vw;
+  width: 40vw;
   height: 25vw;
-  margin-left: 3vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,5 +59,20 @@
   }
   100% {
     color: #14213d;
+  }
+}
+
+@keyframes carousel {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    transform: translateX(0);
+  }
+  55% {
+    transform: translateX(-40vw);
+  }
+  100% {
+    transform: translateX(-80vw);
   }
 }

@@ -3,32 +3,28 @@
     <c-box
       class="cards--container"
     >
-      <c-flex
-        align="center"
-      >
-        <product-card
-          v-for="item in projects"
-          :proj="item"
-          :key="item.id"
-        ></product-card>
+      <product-card
+        v-for="item in projects"
+        :proj="item"
+        :key="item.id"
+      ></product-card>
+      <c-box class="card-last">
+        <c-image
+          :src="require('@/assets/images/eye.gif')"
+          class="image"
+        />
         <NuxtLink to="/work">
-          <c-box class="card-last">
-            <c-image
-              :src="require('@/assets/images/eye.gif')"
-              class="image"
-            />
-            <c-text
-              fontSize="1.4rem"
-              fontWeight="700"
-              lineHeight="3rem"
-              fontFamily="'Mulish', sans-serif"
-              class="letter"
-            >
-              View more
-            </c-text>
-          </c-box>
+          <c-text
+            fontSize="1.4rem"
+            fontWeight="700"
+            lineHeight="3rem"
+            fontFamily="'Mulish', sans-serif"
+            class="letter"
+          >
+            View more
+          </c-text>
         </NuxtLink>
-      </c-flex>
+      </c-box>
     </c-box>
   </c-box>
 </template>

@@ -1,18 +1,13 @@
 .card {
-  margin: 0 3vw;
-  width: 50vw;
+  width: 40vw;
   height: auto;
-  filter: blur(5.5);
   &:hover {
-    filter: blur(1);
     transform: scale(1.04);
-  }
-  &:before {
-    background-color: #262222;
   }
 }
 .image-box {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   height: 25vw;
   background-color: #14213d;
   &:hover {
