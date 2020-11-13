@@ -24,24 +24,24 @@
     <c-flex
       width="100vw"
       height="100vh"
-      align="flex-start"
+      :align="['center', 'center', 'flex-start', 'flex-start']"
       justify="flex-start"
       overflow="scroll"
-      padding="15vh 0 20vh 15vw"
       direction="column"
       zIndex="4"
       backgroundColor="transparent"
       position="absolute"
       top="0"
+      class="content-wrap"
     >
       <c-box
-        width="50%"
+        class="content-container"
       >
         <c-stack :spacing="8">
           <c-heading
             as="h1"
-            fontSize="4.2rem"
-            lineHeight="4.5rem"
+            :fontSize="['2.2rem', '3rem', '3.5rem', '4.2rem']"
+            :lineHeight="['2.6rem', '3.3rem', '3.8rem', '4.5rem']"
             fontWeight="700"
             fontFamily="'Grandstander', cursive"
           >
@@ -49,7 +49,7 @@
           </c-heading>
           <c-text
             fontFamily="'Mulish', sans-serif"
-            fontSize="2rem"
+            :fontSize="['1.4rem', '1.6rem', '1.8rem', '2rem']"
             fontWeight="600"
             width="85%"
           >
@@ -59,17 +59,17 @@
         </c-stack>
       </c-box>
       <c-box
-        width="100%"
+        :width="['80%', '70%', '70%', '100%']"
         margin="30px 0"
       >
         <c-flex
           direction="row"
           align="center"
-          justify="flex-start"
+          :justify="['flex-start', 'flex-start', 'flex-start', 'flex-start']"
         >
           <c-box
-            width="55px"
-            height="55px"
+            :width="['40px', '45px', '50px', '55px']"
+            :height="['40px', '45px', '50px', '55px']"
             backgroundColor="#000000"
             borderRadius="50%"
             margin="0 5px"
@@ -90,8 +90,8 @@
             </a>
           </c-box>
           <c-box
-            width="55px"
-            height="55px"
+            :width="['40px', '45px', '50px', '55px']"
+            :height="['40px', '45px', '50px', '55px']"
             backgroundColor="#000000"
             borderRadius="50%"
             margin="0 5px"
@@ -107,8 +107,8 @@
             </a>
           </c-box>
           <c-box
-            width="55px"
-            height="55px"
+            :width="['40px', '45px', '50px', '55px']"
+            :height="['40px', '45px', '50px', '55px']"
             backgroundColor="#000000"
             borderRadius="50%"
             margin="0 5px"
@@ -132,6 +132,7 @@
       position="absolute"
       right="10vw"
       top="45vh"
+      class="work-img"
     >
       <c-image
         size="450px"
@@ -188,5 +189,58 @@ export default {
   width: 30px;
   height: 30px;
   fill: #ffffff;
+}
+.content-wrap {
+  padding: 15vh 0 20vh 15vw;
+}
+.content-container {
+  width: 50%;
+}
+
+@media screen and (max-width: 30em) {
+  .work-img {
+    display: none;
+  }
+  .content-wrap {
+    padding: 15vh 0 10vh 10vw;
+  }
+  .content-container {
+    width: 80%;
+  }
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media screen and (min-width: 30em) and (max-width: 40em) {
+  .work-img {
+    display: none;
+  }
+  .content-wrap {
+    padding: 15vh 0 15vh 10vw;
+  }
+  .content-container {
+    width: 80%;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 52em) {
+  .work-img {
+    display: none;
+  }
+  .content-wrap {
+    padding: 15vh 0 15vh 10vw;
+  }
+  .content-container {
+    width: 70%;
+  }
+  .icon {
+    width: 27px;
+    height: 27px;
+  }
 }
 </style>

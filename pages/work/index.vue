@@ -67,14 +67,21 @@
       :is-open="isOpen"
       :on-close="close"
       :closeOnOverlayClick="true"
-      size="xl"
       is-centered
+      size="xl"
       v-if="currentSelectedProj !== undefined"
+      scrollBehavior="outside"
     >
       <c-modal-content ref="content">
-        <c-modal-header>{{ displayProjectDetail.title }}</c-modal-header>
-        <c-modal-close-button/>
-        <c-modal-body>
+        <c-modal-header
+          :paddingTop="['150px', '16px', '16px', '16px']"
+          fontFamily="'Mulish', sans-serif"
+        >
+          {{ displayProjectDetail.title }}
+        </c-modal-header>
+        <c-modal-body
+          fontFamily="'Mulish', sans-serif"
+        >
           <c-stack :spacing="5">
             <c-stack :spacing="3" align-items="start" is-inline>
               <c-link :href="`${displayProjectDetail.demo}`" is-external>
@@ -85,7 +92,10 @@
               </c-link>
             </c-stack>
             <c-stack :spacing="2">
-              <c-text v-for="(item, index) in displayProjectDetail.description" :key="index">
+              <c-text
+                fontFamily="'Mulish', sans-serif"
+                v-for="(item, index) in displayProjectDetail.description" :key="index"
+              >
                 {{ item }}
               </c-text>
             </c-stack>
@@ -196,7 +206,7 @@ export default {
   height: 100vh;
 }
 .grid__container {
-  padding-top: 10vh;
+  padding-top: 17.5vh;
   padding-bottom: 15vh;
   position: relative;
   width: 75%;
@@ -265,5 +275,59 @@ export default {
 .grid__item-1:hover .more-detail, .grid__item-4:hover .more-detail {
   bottom: 40%;
   visibility: visible;
+}
+
+@media screen and (max-width: 30em) {
+  .grid__container {
+    grid-template-columns: 75vw;
+    grid-template-rows: 75vw 75vw;
+  }
+  .grid__item-1 {
+    grid-area: 1 / 1 / span 1 / span 1;
+    background: url("../../assets/images/hotel.gif") center no-repeat;
+    opacity: .7;
+  }
+  .grid__item-2 {
+    display: none;
+  }
+  .grid__item-3 {
+    display: none;
+  }
+  .grid__item-4 {
+    grid-area: 2 / 1 / span 1 / span 1;
+    background: url("../../assets/images/burger.gif") center no-repeat;
+    opacity: .7;
+  }
+}
+@media screen and (min-width: 30em) and (max-width: 40em) {
+  .grid__container {
+    width: 67.5%;
+    grid-template-columns: 67.5vw;
+    grid-template-rows: 67.5vw 67.5vw;
+  }
+  .grid__item-1 {
+    grid-area: 1 / 1 / span 1 / span 1;
+    background: url("../../assets/images/hotel.gif") center no-repeat;
+    opacity: .7;
+  }
+  .grid__item-2 {
+    display: none;
+  }
+  .grid__item-3 {
+    display: none;
+  }
+  .grid__item-4 {
+    grid-area: 2 / 1 / span 1 / span 1;
+    background: url("../../assets/images/burger.gif") center no-repeat;
+    opacity: .7;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 52em) {
+  .grid__container {
+    padding: 17.5vh 0;
+    width: 84%;
+    grid-template-columns: 28vw 28vw 28vw;
+    grid-template-rows: 28vw 28vw;
+  }
 }
 </style>
