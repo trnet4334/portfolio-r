@@ -1,37 +1,17 @@
 <template>
   <div class="about-container">
-    <Header/>
-    <client-only>
-      <vue-particles
-        color="#a9a9a9"
-        :particleOpacity="0.5"
-        :particlesNumber="140"
-        shapeType="circle"
-        :particleSize="3"
-        linesColor="#373030"
-        :linesWidth="1"
-        :lineLinked="true"
-        :lineOpacity="0.3"
-        :linesDistance="130"
-        :moveSpeed="2.8"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-      >
-      </vue-particles>
-    </client-only>
+    <c-box class="mobile-nav">
+      <Header/>
+      <Footer/>
+    </c-box>
     <c-flex
       width="100vw"
-      height="100vh"
+      height="auto"
       :align="['center', 'center', 'flex-start', 'flex-start']"
       justify="flex-start"
-      overflow="scroll"
       direction="column"
-      zIndex="4"
       backgroundColor="transparent"
-      position="absolute"
-      top="0"
+      :position="['relative', 'relative', 'relative', 'relative']"
       class="content-wrap"
     >
       <c-box
@@ -44,6 +24,7 @@
             :lineHeight="['2.6rem', '3.3rem', '3.8rem', '4.5rem']"
             fontWeight="700"
             fontFamily="'Grandstander', cursive"
+            color="#ffffff"
           >
             Hi, I'm Steven Yu. A FrontEnd developer creating awesome and effective visual web application.
           </c-heading>
@@ -51,7 +32,8 @@
             fontFamily="'Mulish', sans-serif"
             :fontSize="['1.4rem', '1.6rem', '1.8rem', '2rem']"
             fontWeight="600"
-            width="85%"
+            width="100%"
+            color="#ffffff"
           >
             Interested in working together?
             Feel free to contact me for any project or collaboration.
@@ -60,7 +42,7 @@
       </c-box>
       <c-box
         :width="['80%', '70%', '70%', '100%']"
-        margin="30px 0"
+        :margin="['10px 0', '15px 0', '20px 0', '30px 0']"
       >
         <c-flex
           direction="row"
@@ -70,7 +52,7 @@
           <c-box
             :width="['40px', '45px', '50px', '55px']"
             :height="['40px', '45px', '50px', '55px']"
-            backgroundColor="#000000"
+            backgroundColor="#ff4500"
             borderRadius="50%"
             margin="0 5px"
             display="flex"
@@ -92,7 +74,7 @@
           <c-box
             :width="['40px', '45px', '50px', '55px']"
             :height="['40px', '45px', '50px', '55px']"
-            backgroundColor="#000000"
+            backgroundColor="#ff4500"
             borderRadius="50%"
             margin="0 5px"
             display="flex"
@@ -109,7 +91,7 @@
           <c-box
             :width="['40px', '45px', '50px', '55px']"
             :height="['40px', '45px', '50px', '55px']"
-            backgroundColor="#000000"
+            backgroundColor="#ff4500"
             borderRadius="50%"
             margin="0 5px"
             display="flex"
@@ -129,19 +111,15 @@
       </c-box>
     </c-flex>
     <c-box
-      position="absolute"
-      right="10vw"
-      top="45vh"
-      class="work-img"
+      class="mail"
+      zIndex="20"
     >
-      <c-image
-        size="450px"
-        objectFit="cover"
-        :src="require('@/assets/images/coffee.gif')"
-        alt=""
-      />
+      <a href="mailto:jyunhao.yu@gmail.com">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 30 30" xml:space="preserve">
+          <path d="M25.5,10H17v5.5c0,0.276-0.224,0.5-0.5,0.5S16,15.776,16,15.5V10V7h5.5C21.776,7,22,6.776,22,6.5v-3C22,3.224,21.776,3,21.5,3h-6C15.224,3,15,3.224,15,3.5V10H5.5C2.467,10,0,12.467,0,15.5v8C0,24.327,0.673,25,1.5,25h27c0.827,0,1.5-0.673,1.5-1.5v-9C30,12.019,27.981,10,25.5,10z M10,23.5c0,0.275-0.224,0.5-0.5,0.5h-8C1.224,24,1,23.775,1,23.5v-8C1,13.019,3.019,11,5.5,11s4.5,2.019,4.5,4.5V23.5z"/>
+        </svg>
+      </a>
     </c-box>
-    <Footer/>
   </div>
 </template>
 
@@ -184,6 +162,11 @@ export default {
   width: 100vw;
   height: 100vh;
   overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .icon {
   width: 30px;
@@ -191,21 +174,39 @@ export default {
   fill: #ffffff;
 }
 .content-wrap {
-  padding: 15vh 0 20vh 15vw;
+  padding: 15vh 0 10vh 15vw;
 }
 .content-container {
   width: 50%;
 }
-
-@media screen and (max-width: 30em) {
-  .work-img {
-    display: none;
+.mail {
+  width: 50px;
+  height: 50px;
+  background-color: #fca311;
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  svg {
+    width: 32.5px;
+    height: 32.5px;
+    fill: white;
+    &:hover {
+      transform: rotate(20deg);
+      transition: .35s ease-in-out;
+    }
   }
+}
+
+@media only screen and (max-width: 30em) {
   .content-wrap {
-    padding: 15vh 0 10vh 10vw;
+    padding: 2.5vh 0 15vh 10vw;
   }
   .content-container {
-    width: 80%;
+    width: 85%;
   }
   .icon {
     width: 22px;
@@ -213,12 +214,9 @@ export default {
   }
 }
 
-@media screen and (min-width: 30em) and (max-width: 40em) {
-  .work-img {
-    display: none;
-  }
+@media only screen and (min-width: 30em) and (max-width: 48em) {
   .content-wrap {
-    padding: 15vh 0 15vh 10vw;
+    padding: 2.5vh 0 15vh 10vw;
   }
   .content-container {
     width: 80%;
@@ -228,19 +226,24 @@ export default {
     height: 24px;
   }
 }
-@media screen and (min-width: 40em) and (max-width: 52em) {
-  .work-img {
-    display: none;
-  }
+@media only screen and (min-width: 48em) and (max-width: 62em) {
   .content-wrap {
-    padding: 15vh 0 15vh 10vw;
+    padding: 2.5vh 0 15vh 10vw;
   }
   .content-container {
-    width: 70%;
+    width: 75%;
   }
   .icon {
     width: 27px;
     height: 27px;
+  }
+}
+@media only screen and (max-width: 62em) {
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 100px;
   }
 }
 </style>

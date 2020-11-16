@@ -1,37 +1,25 @@
 <template>
   <div class="container">
-    <Header/>
-    <client-only>
-      <vue-particles
-        color="#a9a9a9"
-        :particleOpacity="0.5"
-        :particlesNumber="140"
-        shapeType="circle"
-        :particleSize="3"
-        linesColor="#373030"
-        :linesWidth="1"
-        :lineLinked="true"
-        :lineOpacity="0.3"
-        :linesDistance="130"
-        :moveSpeed="2.8"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-      >
-      </vue-particles>
-    </client-only>
+    <c-box class="mobile-nav">
+      <Header/>
+      <Footer/>
+    </c-box>
     <c-flex
       width="100vw"
-      height="auto"
+      :height="['auto', 'auto', '100vh', '100vh']"
       justify="center"
+      align="center"
       direction="row"
-      overflow="scroll"
       backgroundColor="transparent"
-      position="absolute"
-      top="0"
+      :position="['relative', 'relative', 'relative', 'absolute']"
+      paddingTop="0"
+      paddingBottom="5vh"
     >
-      <c-box class="grid__container">
+      <c-box
+        class="grid__container"
+        :height="['165vw', '135vw', '100%', '100%']"
+        :overflowY="['unset', 'unset', 'unset', 'scroll']"
+      >
         <c-box class="grid__item-1" @click="open('vue-hotel')">
           <span class="more-detail">
             <c-text
@@ -62,7 +50,16 @@
         </c-box>
       </c-box>
     </c-flex>
-    <Footer/>
+    <c-box
+      class="mail"
+      zIndex="20"
+    >
+      <a href="mailto:jyunhao.yu@gmail.com">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 30 30" xml:space="preserve">
+          <path d="M25.5,10H17v5.5c0,0.276-0.224,0.5-0.5,0.5S16,15.776,16,15.5V10V7h5.5C21.776,7,22,6.776,22,6.5v-3C22,3.224,21.776,3,21.5,3h-6C15.224,3,15,3.224,15,3.5V10H5.5C2.467,10,0,12.467,0,15.5v8C0,24.327,0.673,25,1.5,25h27c0.827,0,1.5-0.673,1.5-1.5v-9C30,12.019,27.981,10,25.5,10z M10,23.5c0,0.275-0.224,0.5-0.5,0.5h-8C1.224,24,1,23.775,1,23.5v-8C1,13.019,3.019,11,5.5,11s4.5,2.019,4.5,4.5V23.5z"/>
+        </svg>
+      </a>
+    </c-box>
     <c-modal
       :is-open="isOpen"
       :on-close="close"
@@ -74,7 +71,7 @@
     >
       <c-modal-content ref="content">
         <c-modal-header
-          :paddingTop="['150px', '16px', '16px', '16px']"
+          :paddingTop="['25px', '16px', '16px', '16px']"
           fontFamily="'Mulish', sans-serif"
         >
           {{ displayProjectDetail.title }}
@@ -204,18 +201,26 @@ export default {
 .container {
   width: 100vw;
   height: 100vh;
+  overflow: scroll;
+  //background: url("../../assets/images/background-4.jpg") center no-repeat;
+  //background-size: cover;
 }
 .grid__container {
-  padding-top: 17.5vh;
-  padding-bottom: 15vh;
   position: relative;
   width: 75%;
-  height: auto;
   display: grid;
-  grid-template-columns: 22.5vw 22.5vw 22.5vw;
-  grid-template-rows: 22.5vw 22.5vw;
+  grid-template-columns: 25vw 25vw 25vw;
+  grid-template-rows: 25vw 25vw;
   column-gap: 6px;
   row-gap: 6px;
+  padding-top: 5vw;
+  padding-bottom: 10vw;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .grid__item-1 {
   grid-area: 1 / 1 / span 1 / span 2;
@@ -276,8 +281,29 @@ export default {
   bottom: 40%;
   visibility: visible;
 }
+.mail {
+  width: 50px;
+  height: 50px;
+  background-color: #fca311;
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  svg {
+    width: 32.5px;
+    height: 32.5px;
+    fill: white;
+    &:hover {
+      transform: rotate(20deg);
+      transition: .35s ease-in-out;
+    }
+  }
+}
 
-@media screen and (max-width: 30em) {
+@media only screen and (max-width: 30em) {
   .grid__container {
     grid-template-columns: 75vw;
     grid-template-rows: 75vw 75vw;
@@ -299,11 +325,11 @@ export default {
     opacity: .7;
   }
 }
-@media screen and (min-width: 30em) and (max-width: 40em) {
+@media only screen and (min-width: 30em) and (max-width: 48em) {
   .grid__container {
-    width: 67.5%;
-    grid-template-columns: 67.5vw;
-    grid-template-rows: 67.5vw 67.5vw;
+    width: 60%;
+    grid-template-columns: 60vw;
+    grid-template-rows: 60vw 60vw;
   }
   .grid__item-1 {
     grid-area: 1 / 1 / span 1 / span 1;
@@ -322,12 +348,26 @@ export default {
     opacity: .7;
   }
 }
-@media screen and (min-width: 40em) and (max-width: 52em) {
+@media only screen and (min-width: 48em) and (max-width: 62em) {
   .grid__container {
-    padding: 17.5vh 0;
+    padding: 0;
     width: 84%;
     grid-template-columns: 28vw 28vw 28vw;
     grid-template-rows: 28vw 28vw;
   }
 }
+@media only screen and (min-width: 62em) {
+  .grid__container {
+    padding: 15vh 0;
+  }
+}
+@media only screen and (max-width: 62em) {
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 100px;
+  }
+}
+// TODO: Ipad Pro, Ipad and Ipad mini style
 </style>

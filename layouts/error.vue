@@ -1,25 +1,5 @@
 <template>
   <div class="container">
-    <client-only>
-      <vue-particles
-        color="#a9a9a9"
-        :particleOpacity="0.5"
-        :particlesNumber="140"
-        shapeType="circle"
-        :particleSize="3"
-        linesColor="#373030"
-        :linesWidth="1"
-        :lineLinked="true"
-        :lineOpacity="0.3"
-        :linesDistance="130"
-        :moveSpeed="2.8"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-      >
-      </vue-particles>
-    </client-only>
     <C-flex
       direction="column"
       align="center"

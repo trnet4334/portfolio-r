@@ -6,10 +6,10 @@
   }
 }
 .image-box {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   height: 25vw;
-  background-color: #14213d;
+  background-color: #1d354c;
   &:hover {
     cursor: pointer;
   }
@@ -18,8 +18,51 @@
   width: 25vw;
   height: 25vw;
   object-fit: cover;
-  opacity: .3;
+  opacity: .4;
   &:hover {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  .card {
+    padding-top: 5vh;
+    width: 100vw;
+  }
+  .image-box {
+    height: 60vw;
+  }
+  .image {
+    width: 60vw;
+    height: 60vw;
+  }
+}
+
+@media screen and (min-width: 30em) and (max-width: 48em) {
+  .card {
+    padding-top: 5vh;
+    width: 100vw;
+  }
+  .image-box {
+    height: 50vw;
+  }
+  .image {
+    width: 50vw;
+    height: 50vw;
+  }
+}
+
+@media screen and (min-width: 48em) and (max-width: 62em) {
+  .card {
+    padding-top: 5vh;
+    width: 100vw;
+  }
+  .image-box {
+    width: 75%;
+    height: 42.5vw;
+  }
+  .image {
+    width: 42.5vw;
+    height: 42.5vw;
   }
 }

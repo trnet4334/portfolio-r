@@ -16,7 +16,7 @@
   scrollbar-width: none;
 }
 .cards--container {
-  width: 120vw;
+  width: fit-content;
   display: flex;
   align-items: center;
   overflow-x: hidden;
@@ -79,3 +79,27 @@
     transform: translateX(-80vw);
   }
 }
+
+@media screen and (max-width: 62em) {
+  .cards--wrap {
+    position: relative;
+    top: unset;
+    width: 100vw;
+    height: auto;
+    right: unset;
+  }
+  .cards--container {
+    flex-direction: column;
+    animation: none;
+    margin: 0 auto;
+  }
+  .card-last {
+    padding-top: 7.5vh;
+    height: 40vw;
+    .image {
+      width: 75px;
+      height: 50px;
+    }
+  }
+}
+

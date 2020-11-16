@@ -14,15 +14,15 @@
             :src="require('@/assets/images/eye.gif')"
             class="image"
           />
-            <c-text
-              fontSize="1.4rem"
-              fontWeight="700"
-              lineHeight="3rem"
-              fontFamily="'Mulish', sans-serif"
-              class="letter"
-            >
-              View more
-            </c-text>
+          <c-text
+            fontSize="1.4rem"
+            fontWeight="700"
+            lineHeight="3rem"
+            fontFamily="'Mulish', sans-serif"
+            class="letter"
+          >
+            View more
+          </c-text>
         </c-box>
       </NuxtLink>
     </c-box>

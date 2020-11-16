@@ -27,34 +27,27 @@
     font-size: 105px;
     font-family: 'Courgette', cursive;
     font-weight: 900;
-    fill: #ffffff;
+    fill: #000000;
     transition: .5s;
+  }
+  circle {
+    fill: #ffffff;
   }
   &:hover {
     cursor: pointer;
-  }
-}
-.mail {
-  width: 50px;
-  height: 50px;
-  background-color: #fca311;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  svg {
-    width: 32.5px;
-    height: 32.5px;
-    fill: white;
-    &:hover {
-      transform: rotate(20deg);
-      transition: .35s ease-in-out;
+    text {
+      fill: #ffffff;
+    }
+    circle {
+      fill: #ef233c;
     }
   }
 }
 
-@media screen and (max-width: 52em) {
+
+@media screen and (max-width: 62em) {
   .header {
+    position: relative;
     padding: 3vh 15px;
   }
 }

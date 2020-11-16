@@ -19,10 +19,11 @@
     >
       <c-link :href="proj.demo" is-external>
         <c-text
-          fontSize="1.8rem"
+          :fontSize="['1.2rem', '1.4rem', '1.6rem', '1.8rem']"
           fontWeight="800"
           fontFamily="'Mulish', sans-serif"
           lineHeight="3rem"
+          color="#ffffff"
         >
           {{ proj.title }}
         </c-text>

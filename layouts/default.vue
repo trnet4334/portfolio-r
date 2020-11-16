@@ -28,3 +28,10 @@ export default {
   },
 }
 </script>
+<style>
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #14213d 30%, #324c6d 100%);
+}
+</style>

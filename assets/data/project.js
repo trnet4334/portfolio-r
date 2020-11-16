@@ -5,26 +5,16 @@ const proj = [
         url: 'hotel',
         description: [
             'This project is built with Vue 2, Vue-CLI 3, firebase and several tools. The content include the introduction of various resort services and hotel booking feature.',
-            'Tourists can make a reservation. They could also check their booking status from the site or either cancel their trip.',
-            'Comments and contributions will be appreciated. I am doing this for practicing different development skills.'
+            'Tourists can make a reservation. They could also check their booking status from the site or either cancel their trip.'
         ],
         github: 'https://github.com/trnet4334/vue-hotel',
         demo: 'https://vue-hotel-53dd5.web.app/',
         tags: [
             'Vue 2',
             'Vue-CLI',
-            'Vue-router',
-            'Vuex',
             'Firebase',
             'Element UI',
-            'dayjs',
-            'lodash',
-            'lozad',
-            'shortid',
-            'v-calendar',
-            'vee-validate',
-            'vue-flux',
-            'vuex-persistedstate'
+            'vee-validate'
         ]
     },
     {
