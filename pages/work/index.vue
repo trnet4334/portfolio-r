@@ -325,7 +325,7 @@ export default {
     opacity: .7;
   }
 }
-@media only screen and (min-width: 30em) and (max-width: 48em) {
+@media only screen and (min-width: 30em) and (max-width: 47em) {
   .grid__container {
     width: 60%;
     grid-template-columns: 60vw;
@@ -369,5 +369,29 @@ export default {
     height: 100px;
   }
 }
-// TODO: Ipad Pro, Ipad and Ipad mini style
+/* iPad and iPad Pro 9.7": Portrait */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .grid__container {
+    padding: 7.5vh 0;
+    width: 76%;
+    grid-template-columns: 38vw 38vw;
+    grid-template-rows: 38vw 38vw 38vw;
+  }
+  .grid__item-1 {
+    grid-area: 1 / 1 / span 1 / span 2;
+  }
+  .grid__item-2 {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+  .grid__item-3 {
+    grid-area: 2 / 2 / span 1 / span 1;
+  }
+  .grid__item-4 {
+    grid-area: 3 / 1 / span 1 / span 2;
+  }
+}
 </style>

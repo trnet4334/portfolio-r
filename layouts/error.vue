@@ -12,6 +12,7 @@
       <c-heading
         as="h1"
         lineHeight="5rem"
+        color="#ffffff"
       >
         Page Not Found
       </c-heading>
@@ -21,6 +22,7 @@
         fontFamily="'Mulish', sans-serif"
         lineHeight="2.2rem"
         textAlign="center"
+        color="#ffffff"
       >
         This could be because of a typo, an out of date link,
         or that the page you requested doesn't exist.
