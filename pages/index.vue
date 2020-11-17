@@ -102,8 +102,6 @@ export default {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  //background: url("./../assets/images/background-4.jpg") center no-repeat;
-  //background-size: cover;
 }
 .slogan {
   padding-left: 50px;
