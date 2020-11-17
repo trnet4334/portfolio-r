@@ -65,5 +65,28 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+    // Optimize images
+    optimizedImages: {
+        inlineImageLimit: 1000,
+        imagesName: ({ isDev }) => isDev ? '[path][name][hash:optimized].[ext]' : 'img/[contenthash:7].[ext]',
+        responsiveImagesName: ({ isDev }) => isDev ? '[path][name]--[width][hash:optimized].[ext]' : 'img/[contenthash:7]-[width].[ext]',
+        handleImages: ['jpeg', 'png', 'svg', 'gif'],
+        optimizeImages: true,
+        optimizeImagesInDev: false,
+        defaultImageLoader: 'img-loader',
+        mozjpeg: {
+            quality: 80
+        },
+        optipng: {
+            optimizationLevel: 3
+        },
+        pngquant: {
+            speed: 7
+        },
+        gifscile: {
+            interlaced: true,
+            optimizationLevel: 1
+        }
+    },
     ...routerBase
 }

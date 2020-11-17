@@ -8,7 +8,7 @@
       >
         <c-image
           class="image"
-          :src="`https://github.com/trnet4334/portfolio-r/blob/main/assets/images/${proj.url}.gif`"
+          :src="require(`@/assets/images/${proj.url}.gif`)"
         />
       </c-flex>
     </c-link>

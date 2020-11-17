@@ -11,7 +11,7 @@
       <NuxtLink to="/work">
         <c-box class="card-last">
           <c-image
-            src="https://github.com/trnet4334/portfolio-r/blob/main/assets/images/eye.gif"
+            :src="require('@/assets/images/eye.gif')"
             class="image"
           />
           <c-text

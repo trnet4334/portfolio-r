@@ -222,7 +222,7 @@ export default {
 }
 .grid__item-1 {
   grid-area: 1 / 1 / span 1 / span 2;
-  background: url("https://github.com/trnet4334/portfolio-r/blob/main/assets/images/hotel.png") center no-repeat;
+  background: url("../../assets/images/hotel.png") center no-repeat;
   background-size: cover;
   position: relative;
   &:hover {
@@ -231,19 +231,19 @@ export default {
 }
 .grid__item-2 {
   grid-area: 1 / 3 / span 1 / span 1;
-  background: url("https://github.com/trnet4334/portfolio-r/blob/main/assets/images/moon.gif") right no-repeat;
+  background: url("../../assets/images/moon.gif") right no-repeat;
   background-size: cover;
   position: relative;
 }
 .grid__item-3 {
   grid-area: 2 / 1 / span 1 / span 1;
-  background: url("https://github.com/trnet4334/portfolio-r/blob/main/assets/images/man.gif") right no-repeat;
+  background: url("../../assets/images/man.gif") right no-repeat;
   background-size: cover;
   position: relative;
 }
 .grid__item-4 {
   grid-area: 2 / 2 / span 1 / span 2;
-  background: url("https://github.com/trnet4334/portfolio-r/blob/main/assets/images/Restaurant.png") center no-repeat;
+  background: url("../../assets/images/Restaurant.png") center no-repeat;
   background-size: cover;
   position: relative;
   &:hover {
@@ -308,7 +308,7 @@ export default {
   }
   .grid__item-1 {
     grid-area: 1 / 1 / span 1 / span 1;
-    background: url("https://github.com/trnet4334/portfolio-r/blob/main/assets/images/hotel.gif") center no-repeat;
+    background: url("../../assets/images/hotel.gif") center no-repeat;
     opacity: .7;
   }
   .grid__item-2 {
@@ -319,7 +319,7 @@ export default {
   }
   .grid__item-4 {
     grid-area: 2 / 1 / span 1 / span 1;
-    background: url("https://github.com/trnet4334/portfolio-r/blob/main/assets/images/burger.gif") center no-repeat;
+    background: url("../../assets/images/burger.gif") center no-repeat;
     opacity: .7;
   }
 }
@@ -331,7 +331,7 @@ export default {
   }
   .grid__item-1 {
     grid-area: 1 / 1 / span 1 / span 1;
-    background: url("https://github.com/trnet4334/portfolio-r/blob/main/assets/images/hotel.gif") center no-repeat;
+    background: url("../../assets/images/hotel.gif") center no-repeat;
     opacity: .7;
   }
   .grid__item-2 {
@@ -342,7 +342,7 @@ export default {
   }
   .grid__item-4 {
     grid-area: 2 / 1 / span 1 / span 1;
-    background: url("https://github.com/trnet4334/portfolio-r/blob/main/assets/images/burger.gif") center no-repeat;
+    background: url("../../assets/images/burger.gif") center no-repeat;
     opacity: .7;
   }
 }
