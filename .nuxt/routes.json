@@ -3,18 +3,21 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/trnet433/Documents/Git_new/portfolio-r/pages/about/index.vue",
-    "chunkName": "pages/about/index"
+    "chunkName": "pages/about/index",
+    "_name": "_387bd9ce"
   },
   {
     "name": "work",
     "path": "/work",
     "component": "/Users/trnet433/Documents/Git_new/portfolio-r/pages/work/index.vue",
-    "chunkName": "pages/work/index"
+    "chunkName": "pages/work/index",
+    "_name": "_900ea674"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/trnet433/Documents/Git_new/portfolio-r/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_fbe37b60"
   }
 ]
